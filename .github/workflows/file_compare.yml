@@ -33,7 +33,7 @@ jobs:
     # 运行 Python 脚本进行文件比对
     - name: Run file compare script
       run: |
-        python compare_files.py  # 执行比对文件的脚本
+        python compareRules.py  # 执行比对文件的脚本
 
     # 将比对结果提交到仓库
     - name: Commit and push changes
