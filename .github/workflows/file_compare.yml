@@ -5,9 +5,8 @@ on:
     - cron: '0 0 * * 1'  # 每周一00:00执行 (UTC时间)
   push:
     branches:
-      - main  # 你想在哪个分支上运行此操作
+      - main  # 当代码推送到main分支时触发
 
-# 工作流的运行环境
 jobs:
   compare:
     runs-on: ubuntu-latest
@@ -35,7 +34,7 @@ jobs:
       run: |
         python compareRules.py  # 执行比对文件的脚本
 
-    # 将比对结果提交到仓库
+    # 将比对结果提交到仓库（只有在有变更时才提交）
     - name: Commit and push generated files
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub 提供的 token
@@ -43,5 +42,9 @@ jobs:
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git add .
-        git commit -m "Auto-update: file comparison result"
-        git push
+        if git diff --cached --exit-code; then
+          echo "No changes to commit"
+        else
+          git commit -m "Auto-update: file comparison result"
+          git push
+        fi
