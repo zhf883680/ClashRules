@@ -38,10 +38,10 @@ jobs:
     # 将比对结果提交到仓库
     - name: Commit and push generated files
       env:
-        GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}  # 使用自定义 PAT_TOKEN
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub 提供的 token
       run: |
-        git config --global user.name "zhf883680"
-        git config --global user.email "zhf883680@gmail.com"
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git add .
         git commit -m "Auto-update: file comparison result"
-        git push https://zhf883680:${{ secrets.PAT_TOKEN }}@github.com/zhf883680/ClashRules.git
+        git push
