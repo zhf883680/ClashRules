@@ -1,0 +1,46 @@
+name: Compare Files
+on:
+  push:
+    branches:
+      - main  # 你想在哪个分支上运行此操作
+# 定时触发工作流：每周一的00:00 UTC时间执行
+on:
+  schedule:
+    - cron: '0 0 * * 1'  # 每周一00:00执行 (UTC时间)
+
+# 工作流的运行环境
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 检出最新的仓库代码
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # 设置 Python 环境
+    - name: Set up Python 3.x
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    # 安装所需的 Python 包（如有需要）
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        # 安装你需要的库，例如 requests
+        pip install requests
+
+    # 运行 Python 脚本进行文件比对
+    - name: Run file compare script
+      run: |
+        python compare_files.py  # 执行比对文件的脚本
+
+    # 将比对结果提交到仓库
+    - name: Commit and push changes
+      run: |
+        git config --local user.name "github-actions[bot]"
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git add .
+        git commit -m "Auto-update: file comparison result"
+        git push
