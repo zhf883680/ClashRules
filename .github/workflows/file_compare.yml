@@ -36,10 +36,12 @@ jobs:
         python compareRules.py  # 执行比对文件的脚本
 
     # 将比对结果提交到仓库
-    - name: Commit and push changes
+    - name: Commit and push generated files
+      env:
+        GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}  # 使用自定义 PAT_TOKEN
       run: |
-        git config --local user.name "github-actions[bot]"
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --global user.name "zhf883680"
+        git config --global user.email "zhf883680@gmail.com"
         git add .
         git commit -m "Auto-update: file comparison result"
-        git push
+        git push https://zhf883680:${{ secrets.PAT_TOKEN }}@github.com/zhf883680/ClashRules.git
