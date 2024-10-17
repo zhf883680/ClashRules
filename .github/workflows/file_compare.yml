@@ -1,12 +1,11 @@
 name: Compare Files
-on:
-  push:
-    branches:
-      - main  # 你想在哪个分支上运行此操作
 # 定时触发工作流：每周一的00:00 UTC时间执行
 on:
   schedule:
     - cron: '0 0 * * 1'  # 每周一00:00执行 (UTC时间)
+  push:
+    branches:
+      - main  # 你想在哪个分支上运行此操作
 
 # 工作流的运行环境
 jobs:
