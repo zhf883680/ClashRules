@@ -1,7 +1,8 @@
 # Clash规则列表
 
 这是一个自用的Clash的规则列表,主要来源于[ShellClash](https://github.com/juewuy/ShellClash)和[ACL4SSR](https://github.com/ACL4SSR/ACL4SSR)和[LM-Firefly](https://github.com/LM-Firefly/Rules)的规则。  
-每周会自动比较ACL4SSR和LM-Firefly的中国大陆的规则,然后添加到规则中  
+中国大陆规则以LM-Firefly为主,
+每周会自动比较ACL4SSR和LM-Firefly的不一样的规则,添加进来,防止大量重复规则 
 ## 使用
 ```
 https://api.dler.io/sub?target=clash&insert=true&new_name=true&exclude=8x|Traffic|Expire&include=&url=xxxxxxxx&config=https://raw.githubusercontent.com/zhf883680/ClashRules/main/Clash.ini
