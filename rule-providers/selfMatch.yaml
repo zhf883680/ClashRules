@@ -1,2 +1,4 @@
 payload:
 - DOMAIN-SUFFIX,gofile.io
+- DOMAIN-SUFFIX,cdn.jsdelivr.net
+- DOMAIN-SUFFIX,fastly.jsdelivr.net
