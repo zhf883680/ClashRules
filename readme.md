@@ -1,3 +1,7 @@
+# 本地Clash规则使用  
+修改Clash.yaml文件,添加机场链接即可  
+
+
 # Clash规则列表
 
 这是一个自用的Clash的规则列表,主要来源于[ShellClash](https://github.com/juewuy/ShellClash)和[ACL4SSR](https://github.com/ACL4SSR/ACL4SSR)和[LM-Firefly](https://github.com/LM-Firefly/Rules)的规则。  
