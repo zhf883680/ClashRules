@@ -55,24 +55,31 @@ rule-providers:
   selfProxy:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/zhf883680/ClashRules@main/rule-providers/selfProxy.yaml"
+    url: "https://raw.githubusercontent.com/zhf883680/ClashRules/refs/heads/main/rule-providers/selfProxy.yaml"
     path: ./ruleset/selfProxy.yaml
     interval: 86400
   selfDirect:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/zhf883680/ClashRules@main/rule-providers/selfDirect.yaml"
+    url: "https://raw.githubusercontent.com/zhf883680/ClashRules/refs/heads/main/rule-providers/selfDirect.yaml"
     path: ./ruleset/selfDirect.yaml
     interval: 86400
   selfMatch:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/zhf883680/ClashRules@main/rule-providers/selfMatch.yaml"
+    url: "https://raw.githubusercontent.com/zhf883680/ClashRules/refs/heads/main/rule-providers/selfMatch.yaml"
     path: ./ruleset/selfMatch.yaml
+    interval: 86400
+  selfReject:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/zhf883680/ClashRules/refs/heads/main/rule-providers/selfReject.yaml"
+    path: ./ruleset/selfReject.yaml
     interval: 86400
 
 rules:
 #  - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOSITE,cn))),REJECT
+  - RULE-SET,selfReject,REJECT
   - GEOIP,lan,DIRECT,no-resolve
   - GEOSITE,category-ads-all,REJECT
   - GEOSITE,private,DIRECT
