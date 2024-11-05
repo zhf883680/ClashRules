@@ -1,12 +1,17 @@
 payload:
+# 视频
 - DOMAIN-KEYWORD,embyvip
 - DOMAIN-KEYWORD,misakaf
 - DOMAIN-SUFFIX,emby.hutaoindex.com
+# 种子
 - DOMAIN-SUFFIX,opentracker.acgnx.se
 - DOMAIN-SUFFIX,t.nyaatracker.com
 - DOMAIN-SUFFIX,tracker.tfile.me
-- DOMAIN-SUFFIX,checkip.synology.com
-- DOMAIN-SUFFIX,pkgupdate7.synology.com
 - DOMAIN-SUFFIX,tracker.cyber-hub.net
+
+# assistant
+- DOMAIN-SUFFIX,home-assistant.io
+# RSS订阅
+- DOMAIN-SUFFIX,plink.anyfeeder.com
 
 
