@@ -29,14 +29,22 @@ proxy-providers:
       enable: true
       url: https://www.gstatic.com/generate_204
       interval: 600
+proxies:
+  - name: "selfUse"
+    type: ss
+    server: ""
+    port: 51262
+    cipher: aes-256-gcm
+    password: ""
 
 proxy-groups:
-  - {name: 🚩 PROXY, type: select, proxies: [♻️ 自动选择, ✅ ACA, 👍 West, 🍑 Hutao,🚀 手动切换]}
-  - {name: 🌍 国外媒体, type: select, proxies: [♻️ 自动选择, ✅ ACA, 👍 West, 🍑 Hutao,🚀 手动切换]}
+  - {name: 🚩 PROXY, type: select, proxies: [♻️ 自动选择, ✅ ACA, 👍 West, 🍑 Hutao,🚀 手动切换,selfUse]}
+  - {name: 🌍 国外媒体, type: select, proxies: [♻️ 自动选择, ✅ ACA, 👍 West, 🍑 Hutao,🚀 手动切换,selfUse]}
   - {name: ♻️ 自动选择, type: url-test, tolerance: 50, include-all-providers: true, filter: "Japan|Singapore|Hong Kong|日本|新加坡|香港"}
   - {name: 🚀 手动切换, type: select, include-all-providers: true, filter: "Japan|Singapore|Hong Kong|日本|新加坡|香港"}
-  - {name: 🐟 漏网之鱼, type: select, proxies: [🚩 PROXY, DIRECT]}
-  - {name: ☁️ onedrive, type: select, proxies: [DIRECT,🚩 PROXY]}
+  - {name: 🐟 漏网之鱼, type: select, proxies: [🚩 PROXY, DIRECT,selfUse]}
+  - {name: ☁️ onedrive, type: select, proxies: [DIRECT,🚩 PROXY,selfUse]}
+  - {name: 🦊 Match, type: select, proxies: [DIRECT,🚩 PROXY,selfUse]}
   - {name: 🪟 微软, type: select, proxies: [DIRECT,🚩 PROXY]}
   - {name: 📏 直连, type: select, proxies: [DIRECT,🚩 PROXY]}
   - {name: 🤖 人工智能, type: url-test, tolerance: 50, include-all-providers: true, filter: "Japan|Singapore|日本|新加坡"}
@@ -44,40 +52,41 @@ proxy-groups:
   - {name: 👍 West, type: url-test, tolerance: 50, use: [🛫 West], filter: "Japan|Singapore|Hong Kong"}
   - {name: 🍑 Hutao, type: url-test, tolerance: 50, use: [🛫 Hutao], filter: "日本|新加坡|香港"}
 rule-providers:
-  emby:
+  selfProxy:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/zhf883680/ClashRules@main/rule-providers/emby.yaml"
-    path: ./ruleset/emby.yaml
+    url: "https://cdn.jsdelivr.net/gh/zhf883680/ClashRules@main/rule-providers/selfProxy.yaml"
+    path: ./ruleset/selfProxy.yaml
     interval: 86400
-  embyvip:
+  selfDirect:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/zhf883680/ClashRules@main/rule-providers/embyvip.yaml"
-    path: ./ruleset/embyvip.yaml
+    url: "https://cdn.jsdelivr.net/gh/zhf883680/ClashRules@main/rule-providers/selfDirect.yaml"
+    path: ./ruleset/selfDirect.yaml
     interval: 86400
-  selfuse:
+  selfMatch:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/zhf883680/ClashRules@main/rule-providers/selfuse.yaml"
-    path: ./ruleset/selfuse.yaml
+    url: "https://cdn.jsdelivr.net/gh/zhf883680/ClashRules@main/rule-providers/selfMatch.yaml"
+    path: ./ruleset/selfMatch.yaml
     interval: 86400
+
 rules:
-  - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOSITE,cn))),REJECT
+#  - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOSITE,cn))),REJECT
   - GEOIP,lan,DIRECT,no-resolve
   - GEOSITE,category-ads-all,REJECT
   - GEOSITE,private,DIRECT
   - GEOSITE,icloud,DIRECT
-  - GEOSITE,apple-cn,DIRECT
+  - GEOSITE,apple,DIRECT
   - GEOSITE,google,🚩 PROXY
   - GEOSITE,github,🚩 PROXY
   - GEOSITE,onedrive,☁️ onedrive
   - GEOSITE,microsoft,🪟 微软
   - GEOSITE,category-ai-chat-!cn,🤖 人工智能
   - GEOSITE,youtube,🌍 国外媒体
-  - RULE-SET,selfuse,🚩 PROXY
-  - RULE-SET,emby,🌍 国外媒体
-  - RULE-SET,embyvip,DIRECT
+  - RULE-SET,selfMatch,🦊 Match
+  - RULE-SET,selfProxy,🌍 国外媒体
+  - RULE-SET,selfDirect,DIRECT
   - GEOSITE,CN,📏 直连
   - GEOSITE,steam@cn,DIRECT
   - GEOSITE,category-games@cn,DIRECT
@@ -88,25 +97,6 @@ rules:
   - GEOIP,CN,📏 直连
   - MATCH,🐟 漏网之鱼
 
-
-mode: rule
-# ipv6 支持
-ipv6: true
-keep-alive-idle: 600
-keep-alive-interval: 15
-log-level: info
-# 允许局域网连接
-allow-lan: true
-# socks5/http 端口
-mixed-port: 7890
-# Meta 内核特性 https://wiki.metacubex.one/config/general
-# 统一延迟
-# 更换延迟计算方式,去除握手等额外延迟
-unified-delay: true
-# TCP 并发
-# 同时对所有ip进行连接，返回延迟最低的地址
-tcp-concurrent: true
-
 geodata-mode: true
 geodata-loader: standard
 geox-url:
@@ -116,7 +106,7 @@ geox-url:
   asn: https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb
 geo-auto-update: true
 geo-update-interval: 24
-find-process-mode: off
+# find-process-mode: off
 # 域名嗅探
 sniffer:
   enable: true
@@ -139,24 +129,31 @@ tun:
 # 缓存
 profile:
   store-selected: true
-  store-fake-ip: true
 # dns 设置
 # 已配置 ipv6
 dns:
   enable: true
   listen: :1053
   prefer-h3: false
-  ipv6: true
+  respect-rules: true
+  ipv6: false
   # 路由器个人建议使用 redir-host 以最佳兼容性
   # 其他设备可以使用 fake-ip
+
   enhanced-mode: redir-host
-  fake-ip-range: 198.18.0.1/16
+  # enhanced-mode: fake-ip
+  # fake-ip-filter:
+  #   - "*"
+  #   - "+.lan"
+  #   - "+.local"
+  #   - "+.market.xiaomi.com"
+  # fake-ip-range: 198.18.0.1/16
+
+
+
+
   use-system-hosts: false
   use-hosts: true
-  fake-ip-filter:
-    - '*'
-    - '+.lan'
-    - '+.local'
   default-nameserver:
     - 223.5.5.5
     - 119.29.29.29
@@ -170,7 +167,7 @@ dns:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
   nameserver-policy:
-    geosite:cn,private:
+    geosite:cn,private,apple,onedrive,microsoft@cn,apple,apple-cn,category-games@cn:
       - https://dns.alidns.com/dns-query
       - https://doh.pub/dns-query
     geosite:geolocation-!cn:
