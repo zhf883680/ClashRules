@@ -1,7 +1,7 @@
 
 payload:
 # 群晖
-- DOMAIN-SUFFIX,checkip.synology.com
-- DOMAIN-SUFFIX,pkgupdate7.synology.com
+# - DOMAIN-SUFFIX,checkip.synology.com
+# - DOMAIN-SUFFIX,pkgupdate7.synology.com
 # 日志跟踪
 - DOMAIN-SUFFIX,ingest.sentry.io
