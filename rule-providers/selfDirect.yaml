@@ -1,10 +1,10 @@
 payload:
-# 视频
-- DOMAIN-KEYWORD,embyvip
-- DOMAIN-KEYWORD,misakaf
-- DOMAIN-SUFFIX,emby.hutaoindex.com
-# assistant
-- DOMAIN-SUFFIX,home-assistant.io
+# # 视频
+# - DOMAIN-KEYWORD,embyvip
+# - DOMAIN-KEYWORD,misakaf
+# - DOMAIN-SUFFIX,emby.hutaoindex.com
+# # assistant
+# - DOMAIN-SUFFIX,home-assistant.io
 # RSS订阅
 - DOMAIN-SUFFIX,plink.anyfeeder.com
 
