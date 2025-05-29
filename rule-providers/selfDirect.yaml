@@ -7,5 +7,6 @@ payload:
 # - DOMAIN-SUFFIX,home-assistant.io
 # RSS订阅
 - DOMAIN-SUFFIX,plink.anyfeeder.com
+- DOMAIN-SUFFIX,micu.hk
 
 
