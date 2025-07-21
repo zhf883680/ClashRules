@@ -1,145 +1,145 @@
 
-#DOMAIN-SUFFIX,cdnjs.cloudflare.com
-# SteamCN
-DOMAIN-SUFFIX,zhenguanyu.biz
-# Epic
-DOMAIN-SUFFIX,cn
-DOMAIN,csgo.wmsj.cn
-DOMAIN-KEYWORD,chinacache
-DOMAIN-SUFFIX,igamecj.com
-#DOMAIN-SUFFIX,code.jquery.com
-DOMAIN-SUFFIX,playstation.com
-IP-CIDR,139.220.243.27/32,no-resolve
-DOMAIN-SUFFIX,chinaplay.store
-DOMAIN-SUFFIX,sony.com
-# Heytap
-DOMAIN-KEYWORD,xiaomi
-DOMAIN-SUFFIX,qupu123.com
-#DOMAIN-SUFFIX,ajax.aspnetcdn.com
-# China DNS
-DOMAIN,opencloud.wostore.cn
-# 中国国内常见域名关键词直连
-# Ximalaya 喜马拉雅
-DOMAIN-SUFFIX,playstation.net
-# 58
-DOMAIN-SUFFIX,13th.tech
-DOMAIN-KEYWORD,alipay
-# Public Direct CDN 公共直连
-# Kuaishou 快手
-# CN域名直连(中国|公司|网络)
-DOMAIN,auth.wosms.cn
-# Bilibili
-DOMAIN-KEYWORD,qhimg
-DOMAIN-SUFFIX,baomitu.com
-IP-CIDR6,2a0b:b581::/48,no-resolve
-DOMAIN-SUFFIX,tebex.io
-DOMAIN,steampowered.com.8686c.com
-# Sina
-DOMAIN,mdn.open.wo.cn
-# Vip 唯品会
-# 4399
-IP-CIDR6,2a0b:b582::/48,no-resolve
-# Douyu 斗鱼
-DOMAIN-KEYWORD,alimama
-DOMAIN-KEYWORD,moke
-DOMAIN-SUFFIX,steamcontent.com
-DOMAIN,config.cmpassport.com
-# NetEase
-DOMAIN-KEYWORD,xiami
-# AccelerateDirectSites
+DOMAIN-KEYWORD,bilibili
 DOMAIN-SUFFIX,hrtsea.com
-# LeTV 乐视
-DOMAIN-SUFFIX,sinaapp.cn
-DOMAIN-SUFFIX,dns.alidns.com
-# MyList
-DOMAIN,dota2.wmsj.cn
-DOMAIN-SUFFIX,cm.steampowered.com
-# JD
-DOMAIN-SUFFIX,steamchina.com
-# 直连列表
-DOMAIN-SUFFIX,bosszhipin.com
-# YYeTs 人人影视
-# PDD 拼多多
-DOMAIN-SUFFIX,xn--55qx5d
+DOMAIN-KEYWORD,baidupcs
+DOMAIN-SUFFIX,msftncsi.com
+DOMAIN-SUFFIX,koyso.com
 DOMAIN-SUFFIX,baidubcr.com
-DOMAIN-SUFFIX,mpyit.com
-DOMAIN,steampipe.steamcontent.tnkjmec.com
-DOMAIN-SUFFIX,steamusercontent.com
-DOMAIN,log1.cmpassport.com
-DOMAIN-SUFFIX,element-plus.org
-# Iqiyi
-DOMAIN-SUFFIX,epicgames.dev
-DOMAIN,nishub1.10010.com
-DOMAIN-SUFFIX,chaipip.com
-DOMAIN,st.dl.bscstorage.net
-# ChinaOneKeyLogin 运营商一键登录
+# Baidu
+DOMAIN-SUFFIX,sonyentertainmentnetwork.com
+IP-CIDR6,2a0b:b580::/48,no-resolve
 DOMAIN-KEYWORD,appzapp
+DOMAIN-KEYWORD,xiami
+# ChinaNet
+IP-CIDR,172.16.102.56/32,no-resolve
+# Ximalaya 喜马拉雅
+DOMAIN-SUFFIX,ghpym.com
+DOMAIN,xz.pphimalayanrt.com
+#DOMAIN-SUFFIX,cdnjs.cloudflare.com
+# LeTV 乐视
+DOMAIN-KEYWORD,ccgslb
+#DOMAIN-SUFFIX,ajax.aspnetcdn.com
+# Meitu
+DOMAIN-SUFFIX,sinaapp.cn
+# CN域名直连(中国|公司|网络)
+DOMAIN-KEYWORD,duobao
+DOMAIN-SUFFIX,xn--55qx5d
+DOMAIN-SUFFIX,images-amazon.com
+# JD
+# Sina
+IP-CIDR,1.12.12.12/32,no-resolve
+DOMAIN-SUFFIX,steamusercontent.com
+DOMAIN-SUFFIX,playstation.net
+DOMAIN-KEYWORD,360buy
+DOMAIN-SUFFIX,mpyit.com
+DOMAIN,steampowered.com.8686c.com
 DOMAIN-SUFFIX,sohuno.com
+# Vip 唯品会
+DOMAIN-SUFFIX,playstationnetwork.com
+IP-CIDR6,2a0b:b581::/48,no-resolve
+DOMAIN-SUFFIX,xn--io0a7i
+DOMAIN-KEYWORD,xiaomi
+DOMAIN,ye.dun.163yun.com
+DOMAIN-KEYWORD,vpimg
+DOMAIN-SUFFIX,steamcontent.com
+# Kingsoft
+DOMAIN-SUFFIX,bosszhipin.com
+# Douyu 斗鱼
+DOMAIN-SUFFIX,biliintl.co
+# Xunlei 迅雷
+# Kuaishou 快手
+DOMAIN-KEYWORD,moke
+# 58
+# ByteDance
+DOMAIN,auth.wosms.cn
+# Iflytek 科大讯飞
+DOMAIN,csgo.wmsj.cn
+# Sohu Sogo
+DOMAIN-SUFFIX,igamecj.com
+DOMAIN,log1.cmpassport.com
+# PDD 拼多多
+DOMAIN-SUFFIX,zhenguanyu.biz
+DOMAIN-SUFFIX,xn--fiqs8s
+DOMAIN-SUFFIX,pdfwifi.com
+DOMAIN-SUFFIX,msftconnecttest.com
+DOMAIN,opencloud.wostore.cn
+DOMAIN-SUFFIX,tebex.io
+# MI
+DOMAIN-KEYWORD,jdpay
+IP-CIDR,139.220.243.27/32,no-resolve
+# 直连列表
+# Heytap
+DOMAIN,st.dl.pinyuncloud.com
+DOMAIN-SUFFIX,playstation.com
+DOMAIN,mdn.open.wo.cn
+# SteamCN
+# Sony
+DOMAIN-KEYWORD,alipay
+DOMAIN-SUFFIX,qupu123.com
+# Iqiyi
+DOMAIN-KEYWORD,chinacache
+DOMAIN,config.cmpassport.com
+DOMAIN,log.cmpassport.com
+# DiDi
+DOMAIN-SUFFIX,epicgames.dev
+DOMAIN-SUFFIX,423down.com
+DOMAIN-SUFFIX,simplecd.me
+DOMAIN,hmrz.wo.cn
+DOMAIN-SUFFIX,kaikeba.com
+# TeamViewer
+# 360
+DOMAIN-SUFFIX,oracle.com
+# AccelerateDirectSites
+IP-CIDR,185.188.32.1/28,no-resolve
+DOMAIN-SUFFIX,doh.360.cn
+# ChinaOneKeyLogin 运营商一键登录
+DOMAIN-KEYWORD,qhimg
+DOMAIN-KEYWORD,alicdn
+DOMAIN-SUFFIX,open.e.189.cn
+DOMAIN-SUFFIX,steamchina.com
+DOMAIN,steamstatic.com.8686c.com
+# 4399
+# YYeTs 人人影视
+DOMAIN-SUFFIX,baomitu.com
+# Tencent
+DOMAIN-SUFFIX,element-plus.org
+# Bilibili
+DOMAIN,dl.steam.clngaa.com
+# Epic
+DOMAIN-SUFFIX,laomo.me
+DOMAIN-SUFFIX,cn
+DOMAIN-SUFFIX,13th.tech
+DOMAIN,dl.steam.ksyna.com
+DOMAIN-SUFFIX,dns.alidns.com
+DOMAIN,wmsjsteam.com
+DOMAIN,dota2.wmsj.cn
+# HuaWei
+DOMAIN,st.dl.eccdnx.com
 DOMAIN-SUFFIX,helpshift.com
+DOMAIN-SUFFIX,auth.wo.cn
+DOMAIN,nishub1.10010.com
+DOMAIN,enrichgw.10010.com
+DOMAIN-KEYWORD,alimama
+IP-CIDR6,2a0b:b582::/48,no-resolve
+DOMAIN-SUFFIX,chinaplay.store
+DOMAIN-SUFFIX,cm.steampowered.com
+DOMAIN-SUFFIX,xip.io
+# 中国国内常见域名关键词直连
+DOMAIN,st.dl.bscstorage.net
+DOMAIN-SUFFIX,chaipip.com
+# China DNS
+# Public Direct CDN 公共直连
+DOMAIN-SUFFIX,sony.com
+IP-CIDR6,2a0b:b583::/48,no-resolve
+# CCTV
+DOMAIN-SUFFIX,weibocdn.cn
+# NetEase
 #DOMAIN-SUFFIX,ajax.cloudflare.com
 # MGTV 芒果TV
-DOMAIN,dl.steam.ksyna.com
-# Sohu Sogo
-DOMAIN,steamstatic.com.8686c.com
-DOMAIN-SUFFIX,pdfwifi.com
-DOMAIN-SUFFIX,koyso.com
-DOMAIN-SUFFIX,images-amazon.com
-# HuaWei
-# Meitu
-DOMAIN,hmrz.wo.cn
-DOMAIN-SUFFIX,sonyentertainmentnetwork.com
-IP-CIDR,1.12.12.12/32,no-resolve
-# DiDi
-DOMAIN-KEYWORD,duobao
-# Baidu
 DOMAIN,id.mail.wo.cn
-DOMAIN,st.dl.pinyuncloud.com
-DOMAIN,st.dl.eccdnx.com
-DOMAIN-SUFFIX,simplecd.me
-IP-CIDR,172.16.102.56/32,no-resolve
-DOMAIN-SUFFIX,open.e.189.cn
-# Alibaba
-DOMAIN-SUFFIX,xip.io
-DOMAIN-KEYWORD,360buy
-DOMAIN-SUFFIX,423down.com
-IP-CIDR,185.188.32.1/28,no-resolve
-# ChinaNet
-IP-CIDR,221.226.128.146/32,no-resolve
-DOMAIN,wmsjsteam.com
-# Iflytek 科大讯飞
-DOMAIN-SUFFIX,doh.360.cn
-DOMAIN-SUFFIX,playstationnetwork.com
-DOMAIN-KEYWORD,bilibili
-IP-CIDR6,2a0b:b583::/48,no-resolve
-DOMAIN-SUFFIX,weibocdn.cn
-# CCTV
-DOMAIN,dl.steam.clngaa.com
-DOMAIN,ye.dun.163yun.com
-DOMAIN-KEYWORD,ccgslb
-DOMAIN-SUFFIX,msftconnecttest.com
-DOMAIN-SUFFIX,ghpym.com
-DOMAIN-SUFFIX,oracle.com
-DOMAIN-KEYWORD,baidupcs
-DOMAIN,xz.pphimalayanrt.com
-DOMAIN-SUFFIX,kaikeba.com
-IP-CIDR6,2a0b:b580::/48,no-resolve
-# Sony
-DOMAIN-SUFFIX,xn--fiqs8s
-DOMAIN-KEYWORD,vpimg
-DOMAIN-SUFFIX,auth.wo.cn
-DOMAIN-SUFFIX,laomo.me
-DOMAIN-KEYWORD,alicdn
-DOMAIN-SUFFIX,msftncsi.com
-# Xunlei 迅雷
-# Tencent
-DOMAIN-KEYWORD,jdpay
-# ByteDance
-# Kingsoft
-# MI
-DOMAIN,enrichgw.10010.com
 # PPTV、PPLive
-DOMAIN,log.cmpassport.com
-# 360
-# TeamViewer
-DOMAIN-SUFFIX,biliintl.co
-DOMAIN-SUFFIX,xn--io0a7i
+# MyList
+IP-CIDR,221.226.128.146/32,no-resolve
+DOMAIN,steampipe.steamcontent.tnkjmec.com
+# Alibaba
+#DOMAIN-SUFFIX,code.jquery.com
