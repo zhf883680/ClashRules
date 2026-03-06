@@ -2,4 +2,7 @@ payload:
 - DOMAIN-SUFFIX,gofile.io
 - DOMAIN-SUFFIX,cdn.jsdelivr.net
 - DOMAIN-SUFFIX,fastly.jsdelivr.net
-- DOMAIN-SUFFIX,emby.hutaoindex.com
+- DOMAIN-SUFFIX,a2.zdz.plus
+- DOMAIN-SUFFIX,speedtest2.zdz.plus
+- DOMAIN-SUFFIX,a1.zdz.plus
+- DOMAIN-SUFFIX,speedtest1.zdz.plus
